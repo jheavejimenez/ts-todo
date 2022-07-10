@@ -11,7 +11,7 @@ const TodoList: React.FC<Props> = ({todos, setTodos}) => {
     return (
         <div className="todos">
             {todos.map((item) =>
-                <li>{item.title}</li>
+                <li className="text-3xl font-bold underline">{item.title}</li>
             )}
         </div>
     )
