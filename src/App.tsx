@@ -9,7 +9,7 @@ const App: React.FC = () => {
 	const [todos, setTodos] = useState<Todo[]>([]);
 
 	const handleAdd = (e: React.FormEvent) => {
-		e.preventDefault();
+		 e.preventDefault();
 		todo && setTodos(
 			[...todos, {id: Date.now(), title: todo, isCompleted: false}]
 		);
@@ -18,8 +18,8 @@ const App: React.FC = () => {
 	console.log(todos);
 
 	return (
-		<div className='App'>
-			<span className='text-3xl font-bold underline'>Todo</span>
+		<div className='content-center'>
+			<span className='text-2xl font-bold leading-7 text-gray-900 sm:text-3xl sm:truncate'>Todo</span>
 			<InputField todo={todo} setTodo={setTodo} handleAdd={handleAdd}/>
 			<TodoList todos={todos} setTodos={setTodos}/>
 		</div>
